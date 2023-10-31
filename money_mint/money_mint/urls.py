@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+
+# The if settings.DEBUG condition allows Django to serve static files when you are in the development environment. In production, you should configure your web server (e.g., Apache, Nginx) to serve static files.
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
