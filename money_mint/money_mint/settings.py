@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'income', # manage income sources, tracking earnings,  and generating income-related reports
-    'expnese', # Managing expenses, categorizing expenditures, and generating expense-related reports.
-    'debt', # Managing debts, including loans and credit card balances, and helping users track their debt repayment progress
-    'budget', # Creating, managing, and tracking budgets, enabling users to set financial goals, and providing budget-related analytics.
+    'authentication', # user signup, sign in, password reset, 
+    'incomes', # manage income sources, tracking earnings,  and generating income-related reports
+    'expenses', # Managing expenses, categorizing expenditures, and generating expense-related reports.
+    'debts', # Managing debts, including loans and credit card balances, and helping users track their debt repayment progress
+    'budgets', # Creating, managing, and tracking budgets, enabling users to set financial goals, and providing budget-related analytics.
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'money_mint.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
