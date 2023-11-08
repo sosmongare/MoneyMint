@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MoneyMint - Financial Management Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Financial Management Tool">
+    <meta name="author" content="Sospeter Mong'are">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- jQuery and other scripts -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/metismenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/waves.js' %}"></script>
+    <script src="{% static 'assets/js/simplebar.min.js' %}"></script>
+
+    <!-- Add your custom JavaScript scripts here -->
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>

@@ -5,7 +5,7 @@ from .forms import UserCreationForm, LoginForm
 
 # render index.html
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'authentication/login.html')
 
 # signup page
 def user_signup(request):
@@ -16,7 +16,7 @@ def user_signup(request):
             return redirect('login')
     else: #  creates a new instance of UserCreationForm and renders the 'signup.html' template, passing the form as context.
         form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'authentication/signup.html', {'form': form})
 
 def user_login(request):
     if request.method == 'POST':
@@ -30,7 +30,7 @@ def user_login(request):
                 return redirect('home')
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'authentication/login.html', {'form': form})
 
 def user_logout(request):
     logout(request)
